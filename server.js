@@ -27,6 +27,8 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // import routes
+const pokemon = require('./pokemon');
+app.use('/pokemon', pokemon);
 
 app.listen(port, '0.0.0.0', function onStart(err) {
   if (err) {
