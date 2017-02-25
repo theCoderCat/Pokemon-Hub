@@ -23,6 +23,7 @@ const PokemonSchema = new Schema({
     heldItem: String,
     isEgg: Boolean,
     isShiny: Boolean,
+    shinyValue: Number,
     updated: { type: Date, default: Date.now }
 });
 const PokemonModel = mongoose.model('PokemonModel', PokemonSchema);
